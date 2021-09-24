@@ -6,8 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\App.Repository\App.Repository.csproj" />
+    <ProjectReference Include="..\App.RepositoryAPI\App.Repository.csproj" />
     <ProjectReference Include="..\MilSiteCore\MilSiteCore.csproj" />
   </ItemGroup>
-
 </Project>

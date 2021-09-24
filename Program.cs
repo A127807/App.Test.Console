@@ -6,15 +6,15 @@ using System.Net.Http;
 using System.Threading.Tasks;
 
 HttpClient httpClient = new();
-IWebApiExecuter apiExectuter = new WebApiExecuter("http://localhost/", httpClient);
+IWebApiExecuter apiExectuter = new WebApiExecuter("https://localhost:44314", httpClient);
 
 await GetLocations();
 
 async Task GetLocations()
 {
 	LocationRepository repository = new(apiExectuter);
+	var locations= await repository.GetAsync();
 
-	var locations = await repository.GetAsync();
 	foreach (var location in locations)
 	{
 		Console.WriteLine($"Locations: {location.LocName}");
