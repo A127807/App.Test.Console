@@ -6,7 +6,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 
 HttpClient httpClient = new();
-IWebApiExecuter apiExectuter = new WebApiExecuter("https://localhost:44314", httpClient);
+IWebApiExecuter apiExectuter = new WebApiExecuter("https://localhost:58530", httpClient);
 
 await GetLocations();
 await GetLocationById(1);
